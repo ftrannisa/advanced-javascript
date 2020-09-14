@@ -36,21 +36,13 @@ class Student {
     this.hobbies.push(hobbies);
   }
 
-  removeHobby(hobbies) {
-    // console.log(this.hobbies.length);
-    // console.log(this.hobbies[1]);
-    let remove = [];
-    for (let i = 0; i <= this.hobbies.length; i++) {
-      if (this.hobbies[i] !== hobbies) {
-        remove.push(this.hobbies[i]);
-      } else {
-        continue;
+    removeHobby (hobbies) {
+    for (let i = 0; i < this.hobbies.length; i++) {
+      if (this.hobbies[i] === hobbies) {
+        this.hobbies.splice(i, 1);
       }
     }
-    this.hobbies = [];
-    this.hobbies.push(remove);
-    //console.log(remove);
-  }
+   }
 
   get Data() {
     return `Nama : ${this.name}, 
